@@ -8,7 +8,7 @@ class Animation {
 
     }
     click() {
-
+        this.browse = document.getElementById('browse').style.display ="block";
         this.browse.classList.add("animation");
         console.log('succes');
         setTimeout(function() { this.browse.classList.remove("animation"); }, 3000);

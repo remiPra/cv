@@ -6,6 +6,12 @@ div {
     overflow: hidden;
 }
 
+
+/* 
+#mainContent {
+    position: relative;
+} */
+
 #container {
     padding: 20px;
     background-color: rgb(0, 5, 224);
@@ -33,6 +39,7 @@ nav {
 
 nav ul {
     padding-left: 0px;
+    padding-top: 31px;
     background-color: rgb(0, 2, 128);
 }
 
@@ -59,6 +66,10 @@ nav a:hover {
     cursor: pointer;
 }
 
+#picture {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 img {
     width: 100%;
     /* height: 100%; */
@@ -67,18 +78,47 @@ img {
 main {
     position: relative;
     width: 70%;
-    margin-top: 1px;
+    /* margin: 0px!important; */
 }
 
-main p {
+main #contentInfo {
     overflow: scroll;
     height: 424px;
     margin: 18px 0%;
-    padding: 0px 10px;
+    padding: 0px 10px 0px 43px;
     background-color: #000280;
     color: white;
 }
 
+
+/* section d'intro*/
+
+#intro h1 {
+    margin-top: 38px;
+    margin-bottom: 20px;
+}
+
+#intro #introContent {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+#intro #introContent h2 {
+    font-style: italic;
+    padding-bottom: 15px
+}
+
+.lineBreak {
+    content: " ";
+    height: 4px;
+    width: 75%;
+    background-color: white;
+    min-width: 192px;
+    margin: 0 auto;
+}
+
+
+/*
 #browse {
     background-color: blueviolet;
     position: absolute;
@@ -88,6 +128,18 @@ main p {
     height: 100%;
     z-index: 1211211;
     opacity: 0;
+    display: none;
+}
+*/
+
+#overlayBack {
+    position: absolute;
+    background-color: #000280;
+    width: 100%;
+    bottom: 18px;
+    z-index: 1111111111;
+    content: " ";
+    height: 15px;
 }
 
 .animation {
@@ -97,11 +149,14 @@ main p {
 @keyframes appears {
     0% {
         opacity: 0;
+        display: block;
     }
     50% {
         opacity: 1;
+        display: block
     }
     100% {
         opacity: 0;
+        display: none;
     }
 }
